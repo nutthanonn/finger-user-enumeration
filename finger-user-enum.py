@@ -67,7 +67,7 @@ def main():
         elif args.wordlist and args.port and args.host:
             user_enum(args.wordlist, args.host, args.user, args.delay)
         else:
-            print("Usage: ./finger-user-enum.py -option ip")
+            print("Usage: ./finger-user-enum.py -option")
             parser.print_help()
     except argparse.ArgumentError:
         parser.print_help()

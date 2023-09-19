@@ -5,8 +5,7 @@
 Usage:
 
 ```bash
-Usage: ./finger-user-enum.py -option ip
-usage: finger-user-enum.py [-h] [-w WORDLIST] [-p PORT] [--host HOST] [-u USER] [-H] [-d DELAY]
+Usage: ./finger-user-enum.py [-h] [-w WORDLIST] [-p PORT] [--host HOST] [-u USER] [-H] [-d DELAY]
 
 Finger User Enum
 
