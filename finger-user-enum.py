@@ -14,7 +14,7 @@ START_MESSAGE = """
 """
 
 
-def user_enum(wordlist, host, user='n!0t_user', delay='0.5'):
+def user_enum(wordlist, host, user='n!0t_user', delay='5'):
     print(START_MESSAGE)
     print("="*100)
     print(f"Using wordlist: {wordlist} on host: {host} with delay: {delay}")
@@ -32,8 +32,10 @@ def user_enum(wordlist, host, user='n!0t_user', delay='0.5'):
             word = word.strip()
             print(f'Checking user: {word}', end='\r')
             pc = os.popen(f'finger {word}@{host}').read()
+            print(pc)
             if 'no such user' not in pc:
                 print(f'Valid user: {word}')
+                break
             time.sleep(float(delay))
     return
 
@@ -56,7 +58,7 @@ def main():
                         help="Show this help message and exit")
 
     parser.add_argument(
-        "-d", "--delay", help="Specify a delay time in seconds", default=0.5)
+        "-d", "--delay", help="Specify a delay time in seconds", default=5)
 
     try:
         args = parser.parse_args()
