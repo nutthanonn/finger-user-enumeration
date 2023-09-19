@@ -14,7 +14,7 @@ START_MESSAGE = """
 """
 
 
-def user_enum(wordlist, host, user='n!0t_user', delay='5'):
+def user_enum(wordlist, host, user='n!0t_user', delay='0.5'):
     print(START_MESSAGE)
     print("="*100)
     print(f"Using wordlist: {wordlist} on host: {host} with delay: {delay}")
@@ -29,10 +29,10 @@ def user_enum(wordlist, host, user='n!0t_user', delay='5'):
         wordlist = open(wordlist, 'rb').readlines()
 
         for word in wordlist:
-            word = word.strip()
+            word = word.strip().decode()
             print(f'Checking user: {word}', end='\r')
             pc = os.popen(f'finger {word}@{host}').read()
-            print(pc)
+            print(str(pc))
             if 'no such user' not in pc:
                 print(f'Valid user: {word}')
                 break
