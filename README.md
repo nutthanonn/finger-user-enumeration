@@ -1,6 +1,6 @@
 # Finger User Enumeration
 
-[pentest-mnokey](https://book.hacktricks.xyz/network-services-pentesting/pentesting-finger)
+[pentest-monkey](https://book.hacktricks.xyz/network-services-pentesting/pentesting-finger)
 
 Usage:
 
@@ -21,4 +21,3 @@ options:
   -d DELAY, --delay DELAY
                         Specify a delay time in seconds
 ```
-# finger-user-enumeration
